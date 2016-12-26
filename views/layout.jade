@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    title PC Repair
+    // Compiled and minified CSS
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
+    // Import Google Icon Font
+    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+    // Let browser know website is optimized for mobile
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    // Import Font Awesome Icons
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  body.blue.lighten-4(style='font-family: comic sans ms, Times New Roman')
+    // Navigation bar of the website
+    nav
+      .nav-wrapper
+        a.brand-logo(href='#') PC Repair
+        a.button-collapse(href='#', data-activates='mobile-demo')
+          i.material-icons menu
+        ul#nav-mobile.right.hide-on-med-and-down
+          li#homeLink
+            a(href='/home')
+              i.fa.fa-home.left.small
+              | Home
+          li
+            a(href='#2') About Us
+          li
+            a(href='#3') Services
+          li
+            a(href='#4') Contact Us
+        ul#mobile-demo.side-nav.blue
+          li.active
+            a(href='#1')
+              i.fa.fa-home.left.small
+              | Home
+          li
+            a(href='#2') About Us
+          li
+            a(href='#3') Services
+          li
+            a(href='#4') Contact Us
+    // Content of the Website
+    block content
+
+    // Footer of the website
+    footer.page-footer.blue
+      .container
+        .row
+          p.grey-text.text-lighten-4.center
+            | Created by 
+            b Rish Joy Del Rosario
+            |  and 
+            b Serjay Ilaga
+            | .
+            |         This project can be found on 
+            b GitHub
+          .container.center
+            a.waves-effect.waves-light.btn-flat.center.black.white-text(style='padding-top: 0.2%; text-transform: capitalize;')
+              i.fa.fa-github-alt.left.small
+              | GitHub Project
+      .footer-copyright.blue.lighten-2.black-text
+        .row.center
+          .col.s2.m4.l4 Software Engineering
+          .col.s8.m4.l4
+            b © 2016 - COEN3463
+          .col.s2.m4.l4 Engr. Gino Tria
+          
+    script(type='text/javascript', src='https://code.jquery.com/jquery-2.1.1.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js')
+    script(type='text/javascript', src='public/javascripts/scripts.js')
