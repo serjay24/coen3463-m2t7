@@ -29,7 +29,6 @@ body {
   	background: linear-gradient(to bottom, rgba(0,0,0,70) 0%,rgba(0,0,0,0.89) 100%); /* W3C */
   	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
-}
 
 .homeBanner {
 	margin-top: 13%;
