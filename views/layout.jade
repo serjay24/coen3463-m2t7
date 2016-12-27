@@ -7,14 +7,16 @@ html
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
     // Import Google Icon Font
     link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    //Import Google Font - Ubuntu Mono
-    link(href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet')
+    //Import Google Font - Ubuntu
+    link(href='https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono' rel='stylesheet')
     // Let browser know website is optimized for mobile
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     // Import Font Awesome Icons
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel= 'stylesheet', type= 'text/css', href= 'stylesheets/style.css')
-  body.blue.lighten-4(style='font-family: Ubuntu Mono, monospace, comic sans ms, Times New Roman; background-image: url(http://www.wallpaperhdi.com/wp-content/uploads/2016/06/Material_Design_Wallpaper_HQ_Pictures.jpg); background-repeat: no-repeat')
+  
+  body
+
     // Navigation bar of the website
     nav.black
       .nav-wrapper
@@ -22,47 +24,49 @@ html
         a.button-collapse(href='#', data-activates='mobile-demo')
           i.material-icons menu
         ul#nav-mobile.right.hide-on-med-and-down
-          li#homeLink.ifHover
-            a(href='/')
-              i.fa.fa-home.left.small
-              | Home
-          li.ifHover
-            a(href='#2') About Us
-          li.ifHover
-            a(href='#3') Services
-          li.ifHover
-            a(href='#4') Contact Us
-        ul#mobile-demo.side-nav.blue
-          li.active
-            a(href='#1')
+          li#homeLink
+            a.onHover.waves-effect(href='/')
               i.fa.fa-home.left.small
               | Home
           li
-            a(href='#2') About Us
+            a.onHover.waves-effect(href='#2') About Us
           li
-            a(href='#3') Services
+            a.onHover.waves-effect(href='#3') Services
           li
-            a(href='#4') Contact Us
+            a.onHover.waves-effect(href='#4') Contact Us
+        ul#mobile-demo.side-nav.black
+          li
+            a.white-text(href='#1')
+              i.fa.fa-home.left.small.white-text
+              | Home
+          li
+            a.white-text(href='#2') About Us
+          li
+            a.white-text(href='#3') Services
+          li
+            a.white-text(href='#4') Contact Us
     // Content of the Website
     block content
 
     // Footer of the website
-    footer.page-footer.blue
+    footer.page-footer.orange
       .container
         .row
-          p.grey-text.text-lighten-4.center
+          p.black-text.text-lighten-4.center
             | Created by 
-            b Rish Joy Del Rosario
+            b
+              a.link(href= 'http://coen3463-m1t7.herokuapp.com/member/delRosario.html', target= '_blank') Rish Joy Del Rosario
             |  and 
-            b Serjay Ilaga
+            b
+              a.link(href= 'http://coen3463-m1t7.herokuapp.com/member/ilaga.html', target='_blank') Serjay Ilaga
             | .
             |         This project can be found on 
             b GitHub
           .container.center
-            a.waves-effect.waves-light.btn-flat.center.black.white-text(style='padding-top: 0.2%; text-transform: capitalize;')
+            a.waves-effect.waves-light.btn-flat.center.black.white-text(href= 'https://github.com/serjay24/coen3463-m2t7', target= '_blank', style='padding-top: 0.2%; text-transform: capitalize;')
               i.fa.fa-github-alt.left.small
               | GitHub Project
-      .footer-copyright.blue.lighten-2.black-text
+      .footer-copyright.orange.lighten-1.black-text
         .row.center
           .col.s2.m4.l4 Software Engineering
           .col.s8.m4.l4
