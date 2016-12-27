@@ -13,3 +13,17 @@ body {
 	color: black;
 	text-decoration: underline;
 }
+
+.parallax-container {
+	height: 500px;
+	width: 100%;
+}
+
+.bg {
+	background: linear-gradient(rgba(0, 0, 0, 0.70),rgba(0, 0, 0, 0.89));
+}
+
+.homeBanner {
+	margin-top: 13%;
+	margin-bottom: 13%;
+}
