@@ -1,4 +1,3 @@
-.bgColor {
-  background-color: blue;
-  color: yellow;
+.ifHover:hover {
+	background-color: orange;
 }

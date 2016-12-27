@@ -10,18 +10,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!--Import Font Awesome Icons-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="public/stylesheets/style.css"></li>
 </head>
 <body style="font-family: comic sans ms, Times New Roman;background-image: url(public/images/BG.jpg)">
   <!--Navigation bar of the website-->
-  <nav>
+  <nav class="black">
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">PC Repair</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li id="homeLink"><a href="#1"><i class="fa fa-home left small"></i>Home</a></li>
-        <li><a href="#2">About Us</a></li>
-        <li><a href="#3">Services</a></li>
-        <li><a href="#4">Contact Us</a></li>
+        <li id="homeLink" class="ifHover"><a href="#1"><i class="fa fa-home left small"></i>Home</a></li>
+        <li class="ifHover"><a href="#2">About Us</a></li>
+        <li class="ifHover"><a href="#3">Services</a></li>
+        <li class="ifHover"><a href="#4">Contact Us</a></li>
       </ul>
 
       <ul class="side-nav blue" id="mobile-demo">
@@ -59,11 +60,10 @@
     </div>
   </footer>
 
-  <script type="text/javascript">
-    document.getElementById("homeLink").classList.add('active');
-  </script>
+  
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-  <script type="text/javascript" src="javascripts/scripts.js"></script>
+  <script type="text/javascript" src="public/javascripts/scripts.js"></script>
+
 </body>
 </html>
