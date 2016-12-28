@@ -14,14 +14,15 @@ html
     // Import Font Awesome Icons
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     link(rel= 'stylesheet', type= 'text/css', href= 'stylesheets/style.css')
+    link(rel= 'icon', href= 'images/wrench.png')
   
   body
 
     // Navigation bar of the website
     nav.black
-      .nav-wrapper
-        a.brand-logo(href='/')&nbsp  fixIT
-          img.logo.left(src='images/wrench.png')
+      .nav-wrapper(style="height: auto")
+        a.brand-logo(href='/')
+          img(src='images/logo.jpg')
         a.button-collapse(href='#', data-activates='mobile-demo')
           i.material-icons menu
         ul#nav-mobile.right.hide-on-med-and-down
@@ -69,7 +70,7 @@ html
             |         This project can be found on 
             b GitHub
           .container.center
-            a.waves-effect.waves-light.btn-flat.center.black.white-text(href= 'https://github.com/serjay24/coen3463-m2t7', target= '_blank', style='padding-top: 0.2%; text-transform: capitalize;')
+            a.waves-effect.waves-light.btn-flat.center.black.white-text(href= 'https://github.com/serjay24/coen3463-m2t7', target= '_blank')
               i.fa.fa-github-alt.left.small
               | GitHub Project
       .footer-copyright.orange.lighten-1.black-text

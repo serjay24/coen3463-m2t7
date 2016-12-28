@@ -16,14 +16,12 @@ router.get('/', function(req, res, next) {
             "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a mollis est, sed dapibus neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae",
             "price_range":"PHP 1000 - PHP 2000",
             "link": '/hardware',
-            "icon": 'fa.fa-wrench.large'
         },
         {
-            "name":"Pc Tune Up",
+            "name":"Software Solutions",
             "description":"Adipiscing elit. Maecenas a mollis est, sed dapibus neque. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae",
             "price_range":"PHP 750 - PHP 1000",
             "link": '/tuneup',
-            "icon": 'fa.fa-home.large'
         }]
 };
 
