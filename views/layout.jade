@@ -20,9 +20,12 @@ html
 
     // Navigation bar of the website
     nav.black
-      .nav-wrapper(style="height: auto")
-        a.brand-logo(href='/')
+      .nav-wrapper
+        a.brand-logo.hide-on-small-only(href= '/')
           img(src='images/logo.jpg')
+        
+        a.brand-logo.hide-on-med-and-up(href= '/')
+          img(src= 'images/wrench.png')
         a.button-collapse(href='#', data-activates='mobile-demo')
           i.material-icons menu
         ul#nav-mobile.right.hide-on-med-and-down
