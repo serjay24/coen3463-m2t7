@@ -2,14 +2,14 @@ extends layout
 
 block content
 
-  .parallax-container.bg.valign-wrapper
+  .parallax-container.bg
     .parallax
       img(src='images/service-home.jpg')
-    .container.center.white-text.valign.hide-on-med-and-down
+    .container.center.white-text.hide-on-med-and-down#homeBanner
       h2= name
       h5(style= 'text-transform: uppercase')= description
 
-    .container.center.white-text.hide-on-large-only#homeBanner
+    .container.center.white-text.hide-on-large-only#homeBanner-med
       h2= name
       h5(style= 'text-transform: uppercase')= description
 
