@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title PC Repair
+    title= title
 
     // Compiled and minified CSS
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css')
@@ -20,7 +20,8 @@ html
     // Navigation bar of the website
     nav.black
       .nav-wrapper
-        a.brand-logo(href='#') PC Repair
+        a.brand-logo(href='/')&nbsp  fixIT
+          img.logo.left(src='images/wrench.png')
         a.button-collapse(href='#', data-activates='mobile-demo')
           i.material-icons menu
         ul#nav-mobile.right.hide-on-med-and-down
@@ -76,7 +77,7 @@ html
           .col.s2.m4.l4.hide-on-small-only Software Engineering
           .col.s12.m4.l4.hide-on-small-only
             b © 2016 - COEN3463
-          .col.s12.hide-on-med-and-up.truncate
+          .col.s12.hide-on-med-and-up.trunca
             b © 2016 - COEN3463 - Software Engineering
           .col.s2.m4.l4.hide-on-small-only Engr. Gino Tria
 

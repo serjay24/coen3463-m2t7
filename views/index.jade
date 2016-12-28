@@ -2,16 +2,38 @@ extends layout
 
 block content
 
-  .parallax-container.bg
+  .parallax-container.bg.valign-wrapper
     .parallax
       img(src='images/service-home.jpg')
-    .container.center.white-text.homeBanner.hide-on-small-only
-      h3 Hello World
-      p This is a description.
-      
-     .container.center.white-text#homeBanner-mobile.hide-on-med-and-up
-      h3 Hello World
-      p This is a description.
+    .container.center.white-text.valign
+      img.logo(src= 'images/wrench.png')
+      h2= name
+      h5(style= 'text-transform: uppercase')= description
+
+  .section.transparent.white-text
+    h4
+      | IT Problem?&nbsp;   ......&nbsp;   LET'S fixIT.
+    .section
+      p
+        | This is the goal.
+
+  .row.orange
+    h5.white-text We offered the following services.
+    .col.s12.m3.l3
+      .card.black
+        .card-content.orange-text.center
+          i.fa.fa-wrench.large.center
+          .card-title= services[0].name
+        .card-content.orange-text
+          p= services[0].description
+    .col.s12.m3.l3
+      .card.black
+        .card-content.orange-text.center
+          i.fa.fa-wrench.large.center
+          .card-title= services[1].name
+        .card-content.orange-text
+          p= services[1].description
+
 
   //h1= title
   //p Welcome to #{title}

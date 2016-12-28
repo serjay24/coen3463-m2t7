@@ -1,7 +1,11 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
 	background-image: url('../images/background.jpg');
-	background-repeat: no-repeat;
+}
+
+.logo {
+	height: auto;
+	width: auto;
 }
 
 .onHover:hover {
@@ -29,12 +33,6 @@ body {
   	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
-.homeBanner {
-	margin-top: 13%;
-	margin-bottom: 13%;
-}
-
-#homeBanner-mobile {
-	margin-top: 31%;
-	margin-bottom: 31%;
+.card {
+	border-radius: 2%;
 }
