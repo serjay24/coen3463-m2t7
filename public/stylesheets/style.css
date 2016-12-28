@@ -28,8 +28,13 @@ body {
   	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
 }
 
-.btn-flat {
-	border: 1px solid white;
+#homeBanner {
+	margin-top: 32%;
+	margin-bottom: 32%;
+}
+
+.service-button {
+	border: 1px solid orange;
 	padding-top: 0.2%;
 	text-transform: capitalize;
 }

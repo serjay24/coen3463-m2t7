@@ -5,7 +5,11 @@ block content
   .parallax-container.bg.valign-wrapper
     .parallax
       img(src='images/service-home.jpg')
-    .container.center.white-text.valign
+    .container.center.white-text.valign.hide-on-med-and-down
+      h2= name
+      h5(style= 'text-transform: uppercase')= description
+
+    .container.center.white-text.hide-on-large-only#homeBanner
       h2= name
       h5(style= 'text-transform: uppercase')= description
 
@@ -27,7 +31,7 @@ block content
           .card-content.orange-text
             p= services[0].description
           .card-content.center
-            a.waves-effect.waves-light.btn-flat.black.orange-text
+            a.waves-effect.waves-light.btn-flat.service-button.black.orange-text
               | View Service
 
       .col.s12.m12.l3
@@ -38,5 +42,5 @@ block content
           .card-content.orange-text
             p= services[1].description
           .card-content.center
-            a.waves-effect.waves-light.btn-flat.black.orange-text
+            a.waves-effect.waves-light.btn-flat.service-button.black.orange-text
               | View Service
