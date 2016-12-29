@@ -35,11 +35,55 @@ body {
 
 #homeBanner-med {
 	margin-top: 30%;
-	margin-bottom: 30%
+	margin-bottom: 30%;
 }
 
 .service-button {
 	border: 1px solid orange;
 	padding-top: 0.2%;
 	text-transform: capitalize;
+}
+
+.align {
+	text-align: justify;
+	text-justify: auto;
+}
+
+textarea,
+input {
+	color: black;
+}
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+	color: gray !important;
+}
+ 
+textarea:-moz-placeholder,
+input:-moz-placeholder { /* Firefox 18- */
+	color: gray !important;
+}
+ 
+textarea::-moz-placeholder,
+input::-moz-placeholder {  /* Firefox 19+ */
+	color: gray !important;
+}
+
+textarea:-ms-input-placeholder,
+input:-ms-input-placeholder {
+	color: gray !important;
+}
+
+.input-field input[type=text]:focus {
+     border: 2px solid orange;
+     box-shadow: 0 1px 0 0 orange;
+}
+
+#message:focus {
+     border: 2px solid orange;
+     box-shadow: 0 1px 0 0 orange;
+}
+
+.btn {
+	border: 2px solid white;
 }
