@@ -55,6 +55,17 @@ html
               i.fa.fa-phone.left.small.white-text
               | Contact Us
 
+    .parallax-container.bg
+      .parallax
+        img(src= bannerImage)
+      .container.center.white-text.hide-on-med-and-down#homeBanner
+        h2= name
+        h5(style= 'text-transform: uppercase')= description
+
+      .container.center.white-text.hide-on-large-only#homeBanner-med
+        h2= name
+        h5(style= 'text-transform: uppercase')= description
+
     // Content of the Website
     block content
 
@@ -73,7 +84,7 @@ html
             |         This project can be found on 
             b GitHub
           .container.center
-            a.waves-effect.waves-light.btn-flat.center.black.white-text(href= 'https://github.com/serjay24/coen3463-m2t7', target= '_blank')
+            a.waves-effect.waves-light.btn-flat.center.black.white-text(href= 'https://github.com/serjay24/coen3463-m2t7', target= '_blank', style= 'text-transform: capitalize')
               i.fa.fa-github-alt.left.small
               | GitHub Project
       .footer-copyright.orange.lighten-1.black-text

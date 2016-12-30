@@ -9,9 +9,10 @@ var name = 'fixIT';
 router.get('/', function(req, res, next) {
   
   var contactData = {
-  	title: name + ' - Your solution to IT Problems',
-	name: name,
-	description: 'Your solution to IT Problems.',
+  	title: 'Contact Us - Support',
+	name: 'Hello World',
+	description: 'Lorem Ipsum',
+    bannerImage: 'images/contact-banner.jpg',
 	contactInfo: [
         {
             "address":"3/F PUP College of Engineering CEA Building, NDC Campus Anonas cor. Pureza St. Sta. Mesa, Manila 01008",

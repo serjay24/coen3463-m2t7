@@ -2,47 +2,26 @@ extends layout
 
 block content
 
-  .parallax-container.bg
-    .parallax
-      img(src='images/service-home.jpg')
-    .container.center.white-text.hide-on-med-and-down#homeBanner
-      h2= name
-      h5(style= 'text-transform: uppercase')= description
-
-    .container.center.white-text.hide-on-large-only#homeBanner-med
-      h2= name
-      h5(style= 'text-transform: uppercase')= description
-
-  .section.transparent.white-text
-    h4.center-align
-      | IT Problem? ~ LET'S fixIT!
+  .section.orange.black-text
+    h2.center-align
+      | #{quote}
     .section.center-align
-      p
-        | This is the goal.
+      h5
+        | #{goal}
 
-  .row.orange
+  .row.transparent
     .section.center
-      h3.center-align.black-text DISCOVER OUR SERVICES
+      h3.center-align.white-text DISCOVER OUR SERVICES
     .section
-      .col.s12.m12.l3
-        .card.black
-          .card-content.orange-text.center
-            i.fa.fa-wrench.large.center
-            .card-title= services[0].name
-          .card-content.orange-text
-            p= services[0].description
-          .card-content.center
-            a.waves-effect.waves-light.btn-flat.service-button.black.orange-text
-              | View Service
-
-      .col.s12.m12.l3
-        .card.black
-          .card-content.orange-text.center
-            i.fa.fa-code.large.center
-            .card-title= services[1].name
-          .card-content.orange-text
-            p= services[1].description
-            br
-          .card-content.center
-            a.waves-effect.waves-light.btn-flat.service-button.black.orange-text
-              | View Service
+      each service, i in services
+        .col.s12.m6.l3
+          .card.black
+            .card-image
+              img(src= service.bannerImage)
+            .card-content.orange-text.center
+              .card-title= service.name
+            .card-content.orange-text
+              p= service.description
+            .card-content.center
+              a.waves-effect.waves-light.btn-flat.service-button.black.orange-text(href= service.link)
+                | View Service
