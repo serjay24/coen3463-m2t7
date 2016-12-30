@@ -37,7 +37,7 @@ router.get('/', function(req, res, next) {
             "description": "Did\'nt find what service you're looking for? ~ Explore deeper.",
             "price_range": "PHP 750 - PHP 1000",
             "bannerImage": "images/explore-more.jpg",
-            "link": '/#4'
+            "link": '/services'
         }]
 };
 

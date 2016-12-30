@@ -9,7 +9,12 @@ var nodeMailer = require('nodemailer');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var contact = require('./routes/contact');
-//var services = require('./routes/services');
+var services = require('./routes/services');
+
+//service-pages template
+//var dataRecovery = require('./routes/data-recovery');
+//var softwareSolutions = require('./routes/software-solutions');
+//var mobileTroubleshoot = require('./routes/mobile-troubleshoot');
 
 var app = express();
 
@@ -28,7 +33,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/contact', contact);
-//app.use('/services', services);
+app.use('/services', services);
+
+//app.use('/services/computer-repair', computerRepair);
+//app.use('/services/data-recovery', dataRecovery);
+//app.use('/services/software-solutions', softwareSolutions);
+//app.use('./services/mobile-troubleshoot', mobileTroubleshoot);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

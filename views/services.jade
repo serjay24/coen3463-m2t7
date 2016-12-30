@@ -1,17 +1,7 @@
 extends layout
 
 block content
-
-  .section.orange.black-text
-    h2.center-align
-      | #{quote}
-    .section.center-align
-      p
-        | #{goal}
-
   .row.transparent
-    .section.center
-      h3.center-align.white-text DISCOVER OUR SERVICES
     .section
       each service, i in services
         .col.s12.m6.l3
