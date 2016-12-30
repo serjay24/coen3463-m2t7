@@ -25,10 +25,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-    var x = req.body.bannerTitle;
-    res.redirect('/contact')
+    var name = req.body.name;
+    var email = req.body.email;
+    var message = req.body.message;
 
-    console.log(x);
+    console.log("\nA customer would like to inquire:\n\n" + "Name: " + name + "\n"
+        + "Email: " + email + "\n" + "Message: " + message + "\n");
+
+    res.redirect('/contact')
 });
 
 module.exports = router;

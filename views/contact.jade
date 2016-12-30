@@ -62,15 +62,15 @@ block content
         br
         .row
           .input-field
-            form(method= 'post', action= 'contact/')
+            form(method= 'post', action= 'contact/', onsubmit='return validateMyForm()')
               .col.s12.m6.l6
                 | Name
                 br
-                input.white(type= 'text', name= 'name', placeholder= 'Juan dela Cruz', maxlength= '45', style= 'text-transform: uppercase')
+                input#name.white(type= 'text', name= 'name', placeholder= 'Juan dela Cruz', maxlength= '45', style= 'text-transform: capitalize')
               .col.s12.m6.l6
                 | E-mail
                 br
-                input.white(type= 'text', name= 'email', placeholder= 'juandelacruz12@gmail.com', style= 'text-transform: lowercase')
+                input#email.white(type= 'text', name= 'email', placeholder= 'juandelacruz12@gmail.com', style= 'text-transform: lowercase')
               .col.s12.m12.l12
                 | Message
                 br
