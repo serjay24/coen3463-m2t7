@@ -51,43 +51,64 @@ router.post('/send-email', function (req, res, next) {
     email = req.body.email;
     message = req.body.message;
 
+    //Content of the Email
+    var emailContent = {
+        from: '"fixIT Team" <fixit.solution.v1@gmail.com>',
+        to: 'fixit.solution.v1@gmail.com',
+        subject: 'Testing Node Mailer',
+        //text: 'This is a test.',
+        html: '<div style="background-color: orange"><section style="background-color: black"><h2 style="font-family: Ubuntu, sans-serif; color: white; text-align: center">fixIT - Your Solution to IT Problems</h2><br><h2 style="font-family: Ubuntu, sans-serif; color: white; text-align: center; font-size: 70px">We\'ve got your inquiries!</h2><h3 style="font-family: Ubuntu, sans-serif; color: white; text-align: center">Thank you for contacting us!</h3><br><p style="font-family: Ubuntu, sans-serif; color: white; text-align: center">One of our support representative will get in touch with you. Always keep your email account active.</p><p style="font-family: Ubuntu, sans-serif; color: white; text-align: center">This is the summary of your inquiries:</p><br><ul style="font-family: Ubuntu, sans-serif; color: white; text-align: left"><li>Name: &nbsp;' + name + '</li><br><li>E-mail: &nbsp;' + email + '</li><br><li>Message: &nbsp;' + message + '</li></ul><br></section></div>'
+        }]
+    };
+
+    var customerCopy = {
+        from: '"fixIT Team" <fixit.solution.v1@gmail.com>',
+        to: email,
+        subject: 'Testing Node Mailer - Copy',
+        text: 'This is the customer copy of email.' 
+    };
+
     //Sending Email
 
     var transporter = nodemailer.createTransport({
         service: 'Gmail',
         auth: {
-            //user:'fixit.solution.v1@gmail.com',
-            //pass: 'fixIT.$upp0rt'
             xoauth2: generator
         }
     });
 
 
-    var emailContent = {
-        from: '"fixIT Team" <fixit.solution.v1@gmail.com>',
-        to: 'fixit.solution.v1@gmail.com',
-        subject: 'Testing Node Mailer',
-        text: 'This is a test.' 
-    };
 
     transporter.sendMail(emailContent, function(error, info) {
         if(error) {
             console.log("\nMessage not sent! Try again." + "\n");
+        }
+        else {
+            console.log("\nMessage Sent!" + "\n");
+        }
+    });
+
+    transporter.sendMail(customerCopy, function(error, info) {
+        if(error) {
+            console.log("\nMessage not sent! Try again. - customer Copy" + "\n");
             res.redirect('/contact')
         }
         else {
             name = "";
             email= "";
             message= "";
-            console.log("\nMessage Sent!" + "\n");
+            console.log("\nMessage Sent - customer Copy!" + "\n");
             res.redirect('/contact');
         }
     });
+});
 
-    //console.log("\nA customer would like to inquire:\n\n" + "Name: " + name + "\n"
-     //   + "Email: " + email + "\n" + "Message: " + message + "\n");
-
-    //res.redirect('/contact');
+router.get('/preview', function(req, res, next) {
+  res.render('emailTemplate', {
+    name: 'Serjay Ilaga',
+    email: 'serjay_ilaga@yahoo.com',
+    message: 'Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum, Lorem ipsum'
+  });
 });
 
 module.exports = router;

@@ -1,0 +1,30 @@
+doctype html
+html
+  body(style= 'background-color: orange')
+    section(style= 'background-color: black')
+        img(src= '../images/wrench.png', style= 'display: block; margin: 0 auto; height: 100px; width: 100px')
+        h2(style= 'font-family: Ubuntu, sans-serif; color: white; text-align: center')
+          | fixIT - Your Solution to IT Problems
+
+        br
+
+        h2(style= 'font-family: Ubuntu, sans-serif; color: white; text-align: center; font-size: 70px')
+          | We've got your inquiries!
+        h3(style= 'font-family: Ubuntu, sans-serif; color: white; text-align: center')
+          | Thank you for contacting us!
+        br
+        p(style= 'font-family: Ubuntu, sans-serif; color: white; text-align: center')
+          | One of our support representative will get in touch with you. Always keep your email account active.
+        p(style= 'font-family: Ubuntu, sans-serif; color: white; text-align: center')
+          | This is the summary of your inquiries:
+        br
+        ul(style= 'font-family: Ubuntu, sans-serif; color: white; text-align: left')
+          li
+            | Name: &nbsp;#{name}
+          br
+          li
+            | E-mail: &nbsp;#{email}
+          br
+          li
+            | Message: &nbsp;#{message}
+        br
