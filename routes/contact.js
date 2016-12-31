@@ -58,7 +58,7 @@ router.post('/send-email', function (req, res, next) {
         subject: 'Testing Node Mailer',
         //text: 'This is a test.',
         html: '<div style="background-color: orange"><section style="background-color: black"><h2 style="font-family: Ubuntu, sans-serif; color: white; text-align: center">fixIT - Your Solution to IT Problems</h2><br><h2 style="font-family: Ubuntu, sans-serif; color: white; text-align: center; font-size: 70px">We\'ve got your inquiries!</h2><h3 style="font-family: Ubuntu, sans-serif; color: white; text-align: center">Thank you for contacting us!</h3><br><p style="font-family: Ubuntu, sans-serif; color: white; text-align: center">One of our support representative will get in touch with you. Always keep your email account active.</p><p style="font-family: Ubuntu, sans-serif; color: white; text-align: center">This is the summary of your inquiries:</p><br><ul style="font-family: Ubuntu, sans-serif; color: white; text-align: left"><li>Name: &nbsp;' + name + '</li><br><li>E-mail: &nbsp;' + email + '</li><br><li>Message: &nbsp;' + message + '</li></ul><br></section></div>'
-        }]
+        }
     };
 
     var customerCopy = {
