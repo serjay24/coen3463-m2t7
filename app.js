@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nodeMailer = require('nodemailer');
+var xoauth2 = require('xoauth2');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
