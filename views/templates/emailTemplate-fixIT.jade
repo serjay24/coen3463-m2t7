@@ -1,0 +1,22 @@
+doctype html
+html
+  body(style= 'font-family: Ubuntu, sans-serif')
+    h2
+      | A new inquiry has been sent by the customer with the following details:
+    br
+    br
+    ul(style= 'text-align: left')
+      li
+        | Name: &nbsp;#{name}
+      br
+      li
+        | E-mail: &nbsp;#{email}
+      br
+      li
+        | Message: &nbsp;#{message}
+      br
+      br
+    h4(style= 'text-align: center')
+      b
+        | Please send them a response as soon as you read this email.
+    br

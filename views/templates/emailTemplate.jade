@@ -1,0 +1,35 @@
+doctype html
+html
+  body(style= 'background-color: orange; padding: 2%; font-family: Ubuntu, sans-serif; color: white')
+    div(style= 'background-color: black')
+        //img(src= '../images/wrench.png', style= 'display: block; margin: 0 auto; height: 100px; width: 100px')
+        h2(style= 'text-align: center')
+          | fixIT - Your Solution to IT Problems
+
+        br
+
+        h2(style= 'text-align: center; font-size: 65px')
+          | We've got your inquiries!
+        h3(style= 'text-align: center')
+          | Thank you for contacting us!
+        br
+        p(style= 'text-align: center')
+          | One of our support representative will get in touch with you. Always keep your email account active.
+        p(style= 'text-align: center')
+          | This is the summary of your inquiries:
+        br
+        ul(style= 'text-align: left')
+          li
+            | Name: &nbsp;#{name}
+          br
+          li
+            | E-mail: &nbsp;#{email}
+          br
+          li
+            | Message: &nbsp;#{message}
+        br
+        p(style= 'text-align: center')
+          | This is an auto-generated Email.
+          br
+          br
+          | © 2016 - COEN3463
