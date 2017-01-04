@@ -18,7 +18,7 @@ router.get('/', function(req, res, next) {
             "name":"Computer Repair",
             "description": "Does your Computer not working properly? ~ fixIT to us!",
             "bannerImage": "images/computer-repair.jpg",
-            "link": '/#1'
+            "link": '/computer-repair'
         },
         {
             "name":"Data Recovery",

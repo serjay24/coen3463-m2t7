@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  br
+  .row.black.white-text
+    .col.s12.m6.l6
+      img(src= serviceImage)
+    .col.s12.m6.l6
+      p
+        | #{serviceInfo}
+      br
+      p
+        | We offer the following service/s under #{name}:
+      ul.browser-default(style= 'list-style: square; list-style-position: inside')
+        each service, i in services
+          li= service
+      br
+      .row.hide-on-small-only
+        .col.s12.m6.l6
+          a.waves-effect.waves-black.btn-flat.orange.black-text.center(href= '/contact', style= 'margin-top: 4%')
+            b
+              | Inquire Now
+        .col.s12.m6.l6
+          h4.orange-text.right-align.flow-text
+            | Price: #{servicePrice}
+
+      .row.hide-on-med-and-up
+        .col.s12
+          h4.orange-text.right-align
+            | Price: #{servicePrice}
+        .col.s12
+          a.waves-effect.waves-teal.btn-flat.orange.black-text.right(href= '/contact')
+            | Inquire Now
