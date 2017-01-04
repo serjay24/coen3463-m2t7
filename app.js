@@ -8,7 +8,6 @@ var nodeMailer = require('nodemailer');
 var xoauth2 = require('xoauth2');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 var contact = require('./routes/contact');
 var services = require('./routes/services');
 
@@ -17,6 +16,10 @@ var computerRepair = require('./routes/computer-repair');
 var dataRecovery = require('./routes/data-recovery');
 var softwareSolutions = require('./routes/software-solutions');
 var mobileTroubleshoot = require('./routes/mobile-troubleshoot');
+var networkTroubleshoot = require('./routes/network-troubleshoot');
+var pcTuneUp = require('./routes/pc-tune-up');
+var cloudService = require('./routes/cloud-service');
+var accessoriesPeripherals = require('./routes/accessories-peripherals');
 
 var app = express();
 
@@ -33,7 +36,6 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 app.use('/contact', contact);
 app.use('/services', services);
 
@@ -41,6 +43,10 @@ app.use('/computer-repair', computerRepair);
 app.use('/data-recovery', dataRecovery);
 app.use('/software-solutions', softwareSolutions);
 app.use('/mobile-troubleshoot', mobileTroubleshoot);
+app.use('/network-troubleshoot', networkTroubleshoot);
+app.use('/pc-tune-up', pcTuneUp);
+app.use('/cloud-service', cloudService);
+app.use('/accessories-peripherals', accessoriesPeripherals);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
