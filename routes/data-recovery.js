@@ -4,17 +4,17 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
 	var data = {
-		title: 'Data Recovery',
+		title: 'Data Recovery - fixIT',
 		name: 'Data Recovery',
 		description: 'Device storage crash unexpectedly? ~ No Problem. We\'ll recover it for you!',
 		bannerImage: 'images/computer-repair.jpg',
-		serviceImage: '#',
-		serviceInfo: "We know the feeling of having a computer that doesn\'nt work properly. This problem may cause us to slow our work."
-		+ " That\'s why at fixIT, we will repair all the problems particularly on your computer may it be hardware or software problem."
-		+ " It is our commitment to help you.",
-		services: ['Reformat', 'Hardware Replacement', 'Operating System Installation and Upgrade', 'Application Installation',
-		'Virus Removal'],
-		servicePrice: '₱500-1000.'
+		serviceImage: 'images/service-data-recovery.jpg',
+		serviceInfo: "We know how important your data is. However you really can\'t tell when will your storage will crash."
+		+ " That\'s why at fixIT, we will recover all the data for you so that your memories of an event will never go to waste."
+		+ " We can recover your data on any type of the device may it be on the CD, Hard Disk Drive, Flash Drive, or Memory Cards."
+		+ ' How cool is that?',
+		services: ['Remote Data Recovery', 'Onsite Data Recovery', 'Specialized Data Recovery'],
+		servicePrice: '₱800 - 2000'
 	};
 
 	res.render('service-page', data);

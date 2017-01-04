@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
 	var data = {
-		title: 'Computer Repair',
+		title: 'Computer Repair - fixIT',
 		name: 'Computer Repair',
 		description: 'Does your Computer not working properly? ~ fixIT to us!',
 		bannerImage: 'images/computer-repair.jpg',
@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 		+ " It is our commitment to help you.",
 		services: ['Reformat', 'Hardware Replacement', 'Operating System Installation and Upgrade', 'Application Installation',
 		'Virus Removal'],
-		servicePrice: '₱500-1000.'
+		servicePrice: '₱500 - 1000'
 	};
 
 	res.render('service-page', data);
