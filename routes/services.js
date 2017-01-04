@@ -50,7 +50,7 @@ router.get('/', function(req, res, next) {
             "name":"Cloud Service",
             "description": "Access your files everywhere without compromising security!",
             "bannerImage": "images/cloud-service.jpg",
-            "link": '/#3'
+            "link": '/cloud-service'
         },
         {
             "name":"Accessories / Peripherals",
