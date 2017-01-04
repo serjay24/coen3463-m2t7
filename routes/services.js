@@ -38,13 +38,13 @@ router.get('/', function(req, res, next) {
             "name":"Network Troubleshoot",
             "description": "Can\'t connect to the internet? ~ Let fixIT do the work!",
             "bannerImage": "images/network-troubleshoot.jpg",
-            "link": '/#3'
+            "link": '/network-troubleshoot'
         },
         {
             "name":"PC Tune-Up",
             "description": "Turtle-like computer speed? ~ Better check it to our experts!",
             "bannerImage": "images/pc-tuneup.png",
-            "link": '/#3'
+            "link": '/pc-tune-up'
         },
         {
             "name":"Cloud Service",
@@ -56,7 +56,7 @@ router.get('/', function(req, res, next) {
             "name":"Accessories / Peripherals",
             "description": "Gaming Peripherals for your computer? ~ We Have IT!",
             "bannerImage": "images/accessories-peripherals.jpg",
-            "link": '/#3'
+            "link": '/accessories-peripherals'
         }]
 };
 
