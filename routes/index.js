@@ -24,13 +24,13 @@ router.get('/', function(req, res, next) {
             "name":"Data Recovery",
             "description": "Device storage crash unexpectedly? ~ No Problem. We'll recover it for you!",
             "bannerImage": "images/data-recovery.jpg",
-            "link": '/#2'
+            "link": '/data-recovery'
         },
         {
             "name":"Software Solutions",
             "description": "Want to Boost your BUSINESS? ~ Our developers are waiting for you!",
             "bannerImage": "images/software-solutions.jpg",
-            "link": '/#3'
+            "link": '/software-solutions'
         },
         {
             "name":"Explore More Services",

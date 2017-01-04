@@ -26,13 +26,13 @@ router.get('/', function(req, res, next) {
             "name":"Software Solutions",
             "description": "Want to Boost your BUSINESS? ~ Our developers are waiting for you!",
             "bannerImage": "images/software-solutions.jpg",
-            "link": '/#3'
+            "link": '/software-solutions'
         },
         {
             "name":"Mobile Troubleshoot",
             "description": "Never missed important calls and messages in your phone!",
             "bannerImage": "images/mobile-troubleshoot.png",
-            "link": '/#3'
+            "link": '/mobile-troubleshoot'
         },
         {
             "name":"Network Troubleshoot",

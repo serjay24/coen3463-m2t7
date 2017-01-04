@@ -22,6 +22,7 @@ generator.on('token', function(token){
 var name = "";
 var email = "";
 var message = "";
+var status = "";
 
 //directory of the template
 var template_dir = 'templates/emailTemplate';
@@ -46,10 +47,15 @@ router.get('/', function(req, res, next) {
         }],
     nameValue: name,
     emailValue: email,
-    messageValue: message
+    messageValue: message,
+    statusValue: status
 };
 
   res.render('contact', contactData);
+  status = "";
+  name= "";
+  email= "";
+  message= "";
 });
 
 var transporter = nodemailer.createTransport({
@@ -63,6 +69,7 @@ router.post('/send-email', function (req, res, next) {
     name = req.body.name;
     email = req.body.email;
     message = req.body.message;
+    status = req.body.status;
     var emailContent, customerCopy;
 
     var data = {
@@ -103,8 +110,9 @@ router.post('/send-email', function (req, res, next) {
 
     transporter.sendMail(customerCopy, function(error, info) {
         if(error) {
+            status= 'Message Not Sent. Please Try Again!';
             console.log("\nMessage not sent! Try again. - customer Copy\n");
-            res.redirect('/contact')
+            res.redirect('/contact#contactForm')
         }
         else {
             console.log("\nMessage Sent! - customer Copy\n");
@@ -118,8 +126,9 @@ router.post('/send-email', function (req, res, next) {
                     name = "";
                     email= "";
                     message= "";
+                    status= 'Message Sent!';
                     console.log("\nMessage Sent!\n");
-                    res.redirect('/contact');
+                    res.redirect('/contact#contactForm');
                 }
             });
         }

@@ -48,10 +48,10 @@ block content
                   | #{contactInfo[0].email}
       .col.s12.m12.l9.black.white-text
         h5 Send us an E-mail
-        br
+        
         .row
           .input-field
-            form(method= 'post', action= 'contact/send-email', onsubmit='return validateMyForm()')
+            form#contactForm(method= 'post', action= 'contact/send-email', onsubmit='return validateMyForm()', name= 'contactForm')
               .col.s12.m6.l6
                 | Name
                 br
@@ -67,5 +67,8 @@ block content
                   | #{messageValue}
                 br
                 button.orange.black-text.waves-effect.waves-dark.btn(type= 'submit')
-                  b
-                    | SEND MY MESSAGE
+                    b
+                      | SEND MY MESSAGE
+                br
+                br
+                | #{statusValue}

@@ -15,8 +15,8 @@ var services = require('./routes/services');
 //service-pages template
 var computerRepair = require('./routes/computer-repair');
 var dataRecovery = require('./routes/data-recovery');
-//var softwareSolutions = require('./routes/software-solutions');
-//var mobileTroubleshoot = require('./routes/mobile-troubleshoot');
+var softwareSolutions = require('./routes/software-solutions');
+var mobileTroubleshoot = require('./routes/mobile-troubleshoot');
 
 var app = express();
 
@@ -39,8 +39,8 @@ app.use('/services', services);
 
 app.use('/computer-repair', computerRepair);
 app.use('/data-recovery', dataRecovery);
-//app.use('/software-solutions', softwareSolutions);
-//app.use('/mobile-troubleshoot', mobileTroubleshoot);
+app.use('/software-solutions', softwareSolutions);
+app.use('/mobile-troubleshoot', mobileTroubleshoot);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

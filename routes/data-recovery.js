@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 		title: 'Data Recovery - fixIT',
 		name: 'Data Recovery',
 		description: 'Device storage crash unexpectedly? ~ No Problem. We\'ll recover it for you!',
-		bannerImage: 'images/computer-repair.jpg',
+		bannerImage: 'images/data-recovery.jpg',
 		serviceImage: 'images/service-data-recovery.jpg',
 		serviceInfo: "We know how important your data is. However you really can\'t tell when will your storage will crash."
 		+ " That\'s why at fixIT, we will recover all the data for you so that your memories of an event will never go to waste."
