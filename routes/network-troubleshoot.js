@@ -9,12 +9,12 @@ router.get('/', function(req, res, next) {
 		description: 'Can\'t connect to the internet?~ Let fixIt do the work!',
 		bannerImage: 'images/network-troubleshoot.jpg',
 		serviceImage: 'images/sevice-network-troubleshoot.jpg',
-		serviceInfo: "FixIT offers a networking servies for home and business. Whether a simple network for your home to share printers or a secure setup for your business. "
-		+ " We make sure no one can acces your data or use your sharede Internet services without your knowledge or consent."
+		serviceInfo: "FixIT offers a networking servies for home and business. Whether a simple network for your home to share printers or a secure setup for your business."
+		+ " We make sure no one can acces your data or use your shared Internet services without your knowledge or consent."
 		+ " It is our job to offer you our assistance.",
-		services: ['Network security Testing', 'Network Cabling', 'Rounting Configuration', 'Intrusion Detection System(IDS)',
+		services: ['Network security Testing', 'Network Cabling', 'Routing Configuration', 'Intrusion Detection System(IDS)',
 		'Firewalls', 'Virtual private Networking (VPN)', 'Wall Jacks/Paneling'],
-		servicePrice: '₱500 - 1000'
+		servicePrice: '₱500 - 5000'
 	};
 
 	res.render('service-page', data);
