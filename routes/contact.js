@@ -109,15 +109,26 @@ router.post('/send-email', function (req, res, next) {
     //Sending Email
 
     transporter.sendMail(customerCopy, function(error, info) {
+
+        generator.on('token', function(token){
+            console.log('New token for %s: %s', token.user, token.accessToken);
+        });
+
         if(error) {
             status= 'Message Not Sent. Please Try Again!';
             console.log("\nMessage not sent! Try again. - customer Copy\n");
+            console.log(error)
             res.redirect('/contact#contactForm')
         }
         else {
             console.log("\nMessage Sent! - customer Copy\n");
 
              transporter.sendMail(emailContent, function(error, info) {
+
+                generator.on('token', function(token){
+                    console.log('New token for %s: %s', token.user, token.accessToken);
+                });
+
                 if(error) {
                     console.log("\nMessage not sent! Try again.\n");
                     res.redirect('/contact')
