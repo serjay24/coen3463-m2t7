@@ -6,11 +6,11 @@ var jadeCompiler = require('../lib/jadeCompiler');
 var nodemailer = require('nodemailer');
 
 var generator = require('xoauth2').createXOAuth2Generator({
-    user: 'serjayilaga24@gmail.com',
-    clientId: '513100680963-tlejh3p9dj15lh7ucfg43g4b4k2gtnog.apps.googleusercontent.com',
-    clientSecret: 'Ay4WQP1b0ogQDL4iJAHQtkfk',
-    refreshToken: '1/8J9ypd9a962n7K6wo6uYh_cwMmfGEoSMuhSPUwNM720',
-    //accessToken: 'ya29.GlvlA8oq4Cmm-LR7KFGOAdB6bfn1S_vr7HkQnqpjXyV7H3QflTNjPcgG6QjiZXq3AC-c_wu67AcHCCIEa-mitEszJAkRJZASTpPBH-_4N2RHVFa4XFlGjltkRAxE' // optional
+    user: 'fixit.solution.v1@gmail.com',
+    clientId: '917097726441-p35t6fo03goi9u5ct6k6n8rg0mv19fbc.apps.googleusercontent.com',
+    clientSecret: 'bIIhfXrbunz6lwWJ-7lyYyEl',
+    refreshToken: '1/yhNux2J9zxZ6Tu-NmNzKJm_GSe_7zvf6uD5SPwvW9Xk',
+    accessToken: 'ya29.GlvlA8oq4Cmm-LR7KFGOAdB6bfn1S_vr7HkQnqpjXyV7H3QflTNjPcgG6QjiZXq3AC-c_wu67AcHCCIEa-mitEszJAkRJZASTpPBH-_4N2RHVFa4XFlGjltkRAxE' // optional
 });
 
 generator.on('token', function(token){
@@ -84,7 +84,7 @@ router.post('/send-email', function (req, res, next) {
 
         emailContent = {
             from: 'fixit.solution.v1@gmail.com',
-            to: 'serjayilaga24@gmail.com',
+            to: 'fixit.solution.v1@gmail.com',
             subject: 'New Inquiry',
             //text: 'This is a test.',
             //html: '<body style="background-color: orange; padding: 2%"><div style="background-color: black"><h2 style="font-family: Ubuntu, sans-serif; color: white; text-align: center">fixIT - Your Solution to IT Problems</h2><br><h2 style="font-family: Ubuntu, sans-serif; color: white; text-align: center; font-size: 70px">We\'ve got your inquiries!</h2><h3 style="font-family: Ubuntu, sans-serif; color: white; text-align: center">Thank you for contacting us!</h3><br><p style="font-family: Ubuntu, sans-serif; color: white; text-align: center">One of our support representative will get in touch with you. Always keep your email account active.</p><p style="font-family: Ubuntu, sans-serif; color: white; text-align: center">This is the summary of your inquiries:</p><br><ul style="font-family: Ubuntu, sans-serif; color: white; text-align: left"><li>Name: &nbsp;' + name + '</li><br><li>E-mail: &nbsp;' + email + '</li><br><li>Message: &nbsp;' + message + '</li></ul><br></section></body>'
