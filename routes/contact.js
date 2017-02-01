@@ -115,10 +115,6 @@ router.post('/send-email', function (req, res, next) {
 
     transporter.sendMail(customerCopy, function(error, info) {
 
-        generator.on('token', function(token){
-            console.log('New token for %s: %s', token.user, token.accessToken);
-        });
-
         if(error) {
             status= 'Message Not Sent. Please Try Again!';
             console.log("\nMessage not sent! Try again. - customer Copy\n");
@@ -127,7 +123,7 @@ router.post('/send-email', function (req, res, next) {
         }
         else {
             console.log("\nMessage Sent! - customer Copy\n");
-
+/*
              transporter.sendMail(emailContent, function(error, info) {
 
                 generator.on('token', function(token){
@@ -147,6 +143,7 @@ router.post('/send-email', function (req, res, next) {
                     res.redirect('/contact#contactForm');
                 }
             });
+*/
         }
     });
 });
