@@ -123,13 +123,8 @@ router.post('/send-email', function (req, res, next) {
         }
         else {
             console.log("\nMessage Sent! - customer Copy\n");
-            res.redirect('/contact#contactForm')
-/*
-             transporter.sendMail(emailContent, function(error, info) {
 
-                generator.on('token', function(token){
-                    console.log('New token for %s: %s', token.user, token.accessToken);
-                });
+             transporter.sendMail(emailContent, function(error, info) {
 
                 if(error) {
                     console.log("\nMessage not sent! Try again.\n");
@@ -144,7 +139,7 @@ router.post('/send-email', function (req, res, next) {
                     res.redirect('/contact#contactForm');
                 }
             });
-*/
+
         }
     });
 });
