@@ -123,6 +123,7 @@ router.post('/send-email', function (req, res, next) {
         }
         else {
             console.log("\nMessage Sent! - customer Copy\n");
+            res.redirect('/contact#contactForm')
 /*
              transporter.sendMail(emailContent, function(error, info) {
 
