@@ -8,10 +8,10 @@ var nodemailer = require('nodemailer');
 
 var generator = require('xoauth2').createXOAuth2Generator({
     user: 'fixit.solution.v1@gmail.com',
-    clientId: '154708225527-uhd1qstr67uriog3botunst1qmn5754g.apps.googleusercontent.com',
-    clientSecret: 'KfO2Kk_4Z5ZBOdULtIFNFJa1',
-    refreshToken: '1/7PY1OiXyrvrl8OEQxOlQWYSmaAwTb4aSEH70SMf0ASY',
-    accessToken: 'ya29.GlvkA2YvOh8OIRE_5Aotsoef0_4ABsqT5EDpprBpXQ6rZUqGthCD7evORWUJY9tS_o-sXMdFDfPoNShAXjE4s5wtQZF1zl5epI9PZSbiUEIB3rphcomsFk0uMuAb' // optional
+    clientId: '917097726441-p35t6fo03goi9u5ct6k6n8rg0mv19fbc.apps.googleusercontent.com',
+    clientSecret: 'bIIhfXrbunz6lwWJ-7lyYyEl',
+    refreshToken: '1/yhNux2J9zxZ6Tu-NmNzKJm_GSe_7zvf6uD5SPwvW9Xk',
+    accessToken: 'ya29.GlvlA8oq4Cmm-LR7KFGOAdB6bfn1S_vr7HkQnqpjXyV7H3QflTNjPcgG6QjiZXq3AC-c_wu67AcHCCIEa-mitEszJAkRJZASTpPBH-_4N2RHVFa4XFlGjltkRAxE' // optional
 });
 
 generator.on('token', function(token){
